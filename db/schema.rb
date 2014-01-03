@@ -21,6 +21,6 @@ ActiveRecord::Schema.define(version: 20140103133821) do
     t.datetime "updated_at"
   end
 
-  add_index "posts", ["slug"], name: "index_posts_on_slug"
+  add_index "posts", ["slug"], name: "index_posts_on_slug", unique: true
 
 end
