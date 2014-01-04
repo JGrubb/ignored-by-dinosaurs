@@ -16,3 +16,4 @@
 /tmp
 *.un~
 *.swp
+config/initializers/secret_token.rb
