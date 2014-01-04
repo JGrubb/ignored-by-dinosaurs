@@ -16,7 +16,6 @@ describe "posts/new" do
     assert_select "form[action=?][method=?]", posts_path, "post" do
       assert_select "input#post_title[name=?]", "post[title]"
       assert_select "textarea#post_body[name=?]", "post[body]"
-      assert_select "input#post_slug[name=?]", "post[slug]"
     end
   end
 end
