@@ -8,6 +8,7 @@ gem 'sqlite3'
 gem 'devise'
 gem 'simple_form'
 gem 'friendly_id'
+gem 'rails-settings-cached', '0.3.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
