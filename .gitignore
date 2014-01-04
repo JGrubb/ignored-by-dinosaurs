@@ -17,3 +17,4 @@
 *.un~
 *.swp
 config/initializers/secret_token.rb
+config/initializers/secret_token.rb.old
