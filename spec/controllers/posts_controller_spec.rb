@@ -41,7 +41,7 @@ describe PostsController do
   describe "GET show" do
     it "assigns the requested post as @post" do
       post = Post.create! valid_attributes
-      get :show, {:id => post.to_param}, valid_session
+      get :show, {:id => post.id}, valid_session
       assigns(:post).should eq(post)
     end
   end
@@ -56,7 +56,7 @@ describe PostsController do
   describe "GET edit" do
     it "assigns the requested post as @post" do
       post = Post.create! valid_attributes
-      get :edit, {:id => post.to_param}, valid_session
+      get :edit, {:id => post.id}, valid_session
       assigns(:post).should eq(post)
     end
   end
@@ -107,18 +107,18 @@ describe PostsController do
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
         Post.any_instance.should_receive(:update).with({ "title" => "MyString" })
-        put :update, {:id => post.to_param, :post => { "title" => "MyString" }}, valid_session
+        put :update, {:id => post.id, :post => { "title" => "MyString" }}, valid_session
       end
 
       it "assigns the requested post as @post" do
         post = Post.create! valid_attributes
-        put :update, {:id => post.to_param, :post => valid_attributes}, valid_session
+        put :update, {:id => post.id, :post => valid_attributes}, valid_session
         assigns(:post).should eq(post)
       end
 
       it "redirects to the post" do
         post = Post.create! valid_attributes
-        put :update, {:id => post.to_param, :post => valid_attributes}, valid_session
+        put :update, {:id => post.id, :post => valid_attributes}, valid_session
         response.should redirect_to(post)
       end
     end
@@ -128,7 +128,7 @@ describe PostsController do
         post = Post.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Post.any_instance.stub(:save).and_return(false)
-        put :update, {:id => post.to_param, :post => { "title" => "invalid value" }}, valid_session
+        put :update, {:id => post.id, :post => { "title" => "invalid value" }}, valid_session
         assigns(:post).should eq(post)
       end
 
@@ -136,7 +136,7 @@ describe PostsController do
         post = Post.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Post.any_instance.stub(:save).and_return(false)
-        put :update, {:id => post.to_param, :post => { "title" => "invalid value" }}, valid_session
+        put :update, {:id => post.id, :post => { "title" => "invalid value" }}, valid_session
         response.should render_template("edit")
       end
     end
@@ -146,13 +146,13 @@ describe PostsController do
     it "destroys the requested post" do
       post = Post.create! valid_attributes
       expect {
-        delete :destroy, {:id => post.to_param}, valid_session
+        delete :destroy, {:id => post.id}, valid_session
       }.to change(Post, :count).by(-1)
     end
 
     it "redirects to the posts list" do
       post = Post.create! valid_attributes
-      delete :destroy, {:id => post.to_param}, valid_session
+      delete :destroy, {:id => post.id}, valid_session
       response.should redirect_to(posts_url)
     end
   end
