@@ -4,13 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Ignored By Dinosaurs" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : Setting.site_name %></title>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
+  <div id="header">
+    <div class="row">
+      <h1><%= link_to Setting.site_name, root_path %></h1>
+    </div>
+  </div>
 
     <%= yield %>
     <%= javascript_include_tag "application" %>
