@@ -1,7 +1,9 @@
 <div class="row">
   <% @posts.each do |post| %>
-    <h2><%= post.title %></h2>
-    <div><%= post.body %></div>
+    <div class="post">
+      <h2><%= post.title %></h2>
+      <div><%= post.body %></div>
+    </div>
   <% end %>
   <%= link_to 'New Post', new_post_path, class: "tiny radius button" %>
 </div>
