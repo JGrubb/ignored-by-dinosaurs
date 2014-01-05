@@ -1,0 +1,14 @@
+<div class="row">
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Value</th>
+    </thead>
+  <% @settings.each do |setting| %>
+    <tr>
+      <td><%= setting.var.gsub(/_/, ' ').titleize %></td>
+      <td><%= setting.value %></td>
+    </tr>
+  <% end %>
+  </table>
+</div>
