@@ -4,8 +4,11 @@ class SettingsController < ApplicationController
     @settings = Setting.unscoped
   end
 
-  def edit
-    @setting = Setting.unscoped.find(params[:id])
+  def update
+    params[:Setting].each_pair do |setting, value|
+      Setting.setting = value
+    end
+    redirect_to :settings_index
   end
 
 end

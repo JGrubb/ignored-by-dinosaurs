@@ -1,14 +1,15 @@
 <div class="row">
-  <table>
+  <table class="large-12 columns">
     <thead>
       <th>Name</th>
       <th>Value</th>
     </thead>
-  <% @settings.each do |setting| %>
+    <%= form_tag "/settings", method: :post do %>
     <tr>
-      <td><%= setting.var.gsub(/_/, ' ').titleize %></td>
-      <td><%= setting.value %></td>
+      <td>Site Name</td>
+      <td><%= text_field_tag "Setting[site_name]", Setting.site_name %></td>
     </tr>
+    <%= submit_tag "Save Changes" %>
   <% end %>
   </table>
 </div>
