@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140104135104) do
+ActiveRecord::Schema.define(version: 20140106171437) do
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -46,5 +46,18 @@ ActiveRecord::Schema.define(version: 20140104135104) do
   end
 
   add_index "settings", ["thing_type", "thing_id", "var"], name: "index_settings_on_thing_type_and_thing_id_and_var", unique: true
+
+  create_table "shows", force: true do |t|
+    t.date     "date"
+    t.string   "venue"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "venue_phone"
+    t.text     "notes"
+    t.string   "tickets_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
