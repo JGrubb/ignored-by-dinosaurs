@@ -6,7 +6,7 @@ class SettingsController < ApplicationController
 
   def update
     params[:Setting].each_pair do |setting, value|
-      Setting.setting = value
+      eval("Setting.#{setting} = '#{value}'")
     end
     redirect_to :settings_index
   end
