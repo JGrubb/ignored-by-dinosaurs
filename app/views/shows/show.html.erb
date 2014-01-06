@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @show.date %>
+</p>
+
+<p>
+  <strong>Venue:</strong>
+  <%= @show.venue %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @show.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @show.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @show.state %>
+</p>
+
+<p>
+  <strong>Venue phone:</strong>
+  <%= @show.venue_phone %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @show.notes %>
+</p>
+
+<p>
+  <strong>Tickets url:</strong>
+  <%= @show.tickets_url %>
+</p>
+
+<%= link_to 'Edit', edit_show_path(@show) %> |
+<%= link_to 'Back', shows_path %>

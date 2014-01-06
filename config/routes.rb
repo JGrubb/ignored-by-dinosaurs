@@ -1,4 +1,6 @@
 IgnoredByDinosaurs::Application.routes.draw do
+  resources :shows
+
   resources :posts
 
   get 'settings/' => 'settings#index', as: :settings_index
