@@ -2,7 +2,7 @@
   <% @posts.each do |post| %>
     <div class="post">
       <h2><%= link_to post.title, post %></h2>
-      <div><%= post.body %></div>
+      <div><%= simple_format(post.body) %></div>
     </div>
   <% end %>
   <%= link_to 'New Post', new_post_path, class: "tiny radius button" %>
