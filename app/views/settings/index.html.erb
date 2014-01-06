@@ -5,11 +5,13 @@
       <th>Value</th>
     </thead>
     <%= form_tag "/settings", method: :post do %>
-    <tr>
-      <td>Site Name</td>
-      <td><%= text_field_tag "Setting[site_name]", Setting.site_name %></td>
-    </tr>
-    <%= submit_tag "Save Changes" %>
+      <tr>
+        <td>Site Name</td>
+        <td><%= text_field_tag "Setting[site_name]", Setting.site_name %></td>
+      </tr>
+      <tr>
+        <td colspan=2><%= submit_tag "Save Changes", class: "tiny radius button" %></td>
+      </tr>
     <% end %>
   </table>
 </div>

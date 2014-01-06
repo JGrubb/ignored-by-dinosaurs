@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.edit_post {
+.edit_post, .new_post {
   textarea {
     min-height: 15em;
     line-height: 1.5
