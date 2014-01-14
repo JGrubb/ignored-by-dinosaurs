@@ -9,6 +9,10 @@ gem 'devise'
 gem 'simple_form'
 gem 'friendly_id'
 gem 'rails-settings-cached', '0.3.1'
+gem 'thin'
+gem 'mini_magick'
+gem 'carrierwave'
+gem 'annotate'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
