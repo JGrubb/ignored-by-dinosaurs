@@ -1,4 +1,5 @@
 IgnoredByDinosaurs::Application.routes.draw do
+
   resources :shows
 
   resources :posts
@@ -7,6 +8,8 @@ IgnoredByDinosaurs::Application.routes.draw do
   post 'settings' => 'settings#update'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+
+  resources :pages, path: ''
 
   # You can have the root of your site routed with "root"
   root 'posts#index'

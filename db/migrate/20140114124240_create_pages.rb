@@ -4,8 +4,10 @@ class CreatePages < ActiveRecord::Migration
       t.string :title
       t.string :banner
       t.text :body
+      t.string :slug
 
       t.timestamps
     end
+    add_index :pages, :slug
   end
 end
