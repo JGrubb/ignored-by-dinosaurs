@@ -10,7 +10,12 @@
         <td><%= text_field_tag "Setting[site_name]", Setting.site_name %></td>
       </tr>
       <tr>
-        <td colspan=2><%= submit_tag "Save Changes", class: "tiny radius button" %></td>
+        <td>Main banner image</td>
+        <td><%= file_field_tag "Setting[banner]", value: Setting.banner if Setting.banner %></td>
+      </tr>
+      <tr>
+        <td><%= submit_tag "Save Changes", class: "tiny radius button" %></td>
+        <td></td>
       </tr>
     <% end %>
   </table>
